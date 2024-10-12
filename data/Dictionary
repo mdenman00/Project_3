@@ -1,0 +1,12 @@
+dictionary for the columns in clean_gutselli data
+
+lot # - A series of number and letters that codes for a muesum/institution tag
+specimen number - the number of individuals of that lot cataloged
+SL - standard length, tip of snouth to the last vertebrae 
+LL - Lateral line scale count
+PLL - Posterior lateral line
+TV - Total volume
+CPD - Caudal peduncle depth
+Lip tip - if a lip tip is present
+Scaled Opercle - if the opercle is present 
+Anterior dorsal spot - present or not
