@@ -72,7 +72,6 @@ axis.title.y = element_text(size = 20)
 )
 ```
 
-
 6) Check the normality of the residuals. Do they look OK? Are we violating assumptions? (5 pts)
 
 ```{r}
