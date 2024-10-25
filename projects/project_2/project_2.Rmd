@@ -1,0 +1,208 @@
+---
+title: "Project Two"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+Due Oct. 25 at 11:59 PM. 
+
+For this first part of the exam, you can either use `surveys_complete.csv` or your own data. If you are using your own data, you must have data in which you think you have a numerical predictor variable and a numerical response variable. If you are using `surveys_complete`, you can use weight and hindfoot_length for this.
+
+Save this file in your `projects` directory. You can either save it in a project two subdirectory, or just put it in projects. Either way is fine.
+
+1) Load in your data. Which variable will you be using as a predictor, and which as a response? (5 pts)
+
+```{r}
+# read in data here
+gutselli = read.csv("data/clean_gutselli.csv")
+```
+
+```
+# Answer which column is predictor and which is response
+Standard length (SL) is predictor and caudal peduncle depth (CPD) is the response
+```
+
+2) Plot the two against each other with a scatter plot. Do the data appear to be related linearly? (5 pts)
+
+```{r}
+# Plot here
+cpd_sl_plot = ggplot(gutselli, mapping = aes(x = SL, y = CPD)) + geom_point()
+```
+
+```
+#Answer here
+No, they don't appear to have a linear relationship
+
+```
+
+
+3) Fit the linear model. View the summary. (5 pts)
+
+
+```{r}
+# Code here
+model_fit = lm(CPD ~ SL, data = gutselli)
+summary(model_fit)
+```
+
+4) Does the summary make sense when you compare it to the plot you made? Does our model have good predictive power? Evaluate the residual standard error, intercept, and R-Squared in particular. Would you say your predictor predicts the response?  (10 pts)
+
+
+```
+# Answer here
+broom::tidy(model_fit)
+No, my predictor does not predict the response. My predictor predicts a very small amount of the response variable according to the summary. 
+```
+
+
+5) Plot the model on the graph. Increase the size of the text so it is comfortably readable at 5 feet. Make sure axis labels are readable and not overlapping with one another. (5 pts)
+
+```
+# Code here
+ggplot(gutselli, aes(x = SL, y = CPD)) +
+geom_point() +
+geom_smooth(method = "lm", color = "purple", size = 0.5) +
+xlab("Standard Length") +
+ylab("Caudal Peduncle Depth") +
+geom_jitter() +
+theme(
+axis.title.x = element_text(size = 20),
+axis.title.y = element_text(size = 20)
+)
+```
+
+
+6) Check the normality of the residuals. Do they look OK? Are we violating assumptions? (5 pts)
+
+```{r}
+
+#Code here
+broom::augment(model_fit) -> augmented_fit
+qqnorm(augmented_fit$.resid)
+qqline(augmented_fit$.resid, col = "red")
+
+#No, this data does not look okay. Yes we are violating assumptions, it is not a normal distribution
+
+```
+
+Why is normality of residuals important? 
+
+```{r}
+
+#Answer here
+#Normality of residuals assumes a linear regression and normal distribution of error. If there is a lot of deviation from normality, the model should be checked for validity. 
+```
+
+7) If you are using `surveys_complete`: Is there interspecific variation in the linear model? Hint: look at our prior work with facet plots. (15 pts) 
+
+If you are *not* using  `surveys_complete`: Do you think there are groupings within your data that may have a separate linear model? Try grouping the data by that variable and redoing the lm. If this would not make sense for your data, you may also attempt to do multiple predictor variables. (15 pts)
+
+```{r}
+#code here
+ggplot(gutselli, aes(x = SL, y = CPD, color = LL)) + geom_point() + geom_smooth(method = "lm", color = "purple", size = 0.5)
+#or 
+lm(CPD ~ SL + LL, data = gutselli) -> lm_output
+lm_output
+
+#No, i don't think grouping will have a separate linear model. Looking at the raw data it seems like there is no clear predictor or linear relationship. 
+```
+
+## Part Two
+
+In this portion, you are free to use your own data if you have a categorical predictor variable and a response variable. Otherwise, you may use the columns sex and weight in `surveys_complete`
+
+1) First, plot the data grouped by sex (5 pts)
+
+```{r}
+
+# plot code here
+ggplot(gutselli, aes(x = Anterior.dorsal.spot, y = SL)) + geom_point() + geom_smooth(method = "lm", color = "purple", size = 0.5)
+
+#grouped by presence of anterior dorsal spot
+```
+
+2) Try an ANOVA of this data (5 pt)
+
+```{r}
+# ANOVA code here
+aov(model_fit) -> anova_model_fit
+anova_model_fit
+summary(anova_model_fit)
+#plot 
+plot(anova_model_fit)
+
+#the anova says that the standard length does not explain a significant amount of variation in the presence of the anterior dorsal spot. 
+```
+
+3) How about a linear model? What information does this give you that an ANOVA can't? (5 pts)
+
+
+```{r}
+#Code here
+ggplot(gutselli, aes(x = Anterior.dorsal.spot, y = SL)) + geom_point() + geom_smooth(method = "lm", color = "purple", size = 0.5) 
+
+lm(SL ~ Anterior.dorsal.spot, data = removed_na) -> lm_output_3
+summary(lm_output_3)
+
+```
+
+```
+#Answer here
+# after summarizing the results of the linear model, I get the same results. There is no statistical significance when looking the affect that the dorsal spot does not explain any variation in the standard length (SL) because of the high p-value in all anterior dorsal spot categories. 
+# The linear model gives better insight on the relationships between variables than an anova by looking at the coefficients
+
+```
+
+3) Plot the lm with the data, with points colored by sex. (10 pts)
+
+
+```{r}
+#Plot code here
+
+ggplot(gutselli, aes(x = Anterior.dorsal.spot, y = SL, color = Anterior.dorsal.spot)) + geom_point() + geom_smooth(method = "lm", color = "purple", size = 0.5)
+
+```
+
+4) Choose any model we've looked at so far, but use two predictor variables. Perform an LM, plot the results, and state if this changes your interpretation of the relationship between variables (10 pts)
+
+```{r}
+# LM Code Here 
+
+lm(CPD ~ SL + Anterior.dorsal.spot, data = gutselli) -> lm_output_2
+lm_output_2
+
+```
+
+```{r}
+# Plot Code Here 
+ggplot(gutselli, aes(x = SL, y = CPD, color = Anterior.dorsal.spot)) + geom_point() + geom_smooth(method = "lm", color = "purple", size = 0.5)
+
+
+```
+
+```
+# Text answer here
+# No, this does not change the interpretation of my results, the relationship between the variables still appears random.  
+```
+
+## Part Three
+
+
+1) Add and commit this document (5 pts)
+
+```
+#Commands here
+```
+
+2) Push your changes to github (10 pts)
+
+```
+#Commands here
+```
+
+
+
+# MS students
+
+My expectation is that you'll do this with your own data. If any part of this doesn't make sense with your data, please get in touch ASAP so we can work it out.
