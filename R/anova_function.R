@@ -7,7 +7,6 @@
 #' @return summary of the ANOVA results and plots of the data
 #' @export
 #'
-#' @examples
 anova_function = function(data, response, predictor) {
   formula <- as.formula(paste(response, "~", predictor))
   anova_result <- aov(formula, data = data)

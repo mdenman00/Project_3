@@ -5,13 +5,13 @@
 #'
 #' @return "Too small" if average is less than it should be
 #' @export
-gutselli_function = function(filepath, column){
+gutselli_function = function(filepath, column, number){
   df = readr::read_csv(filepath, na=c("", "-","NA"))
   result = dplyr::df %>%
     pull({{column}}) %>%
     na.omit %>%
     mean
-  if (result < 20){ print("Too Small")}
+  if (result < number){ print("Too Small")}
   else { return(result)}
 }
 
