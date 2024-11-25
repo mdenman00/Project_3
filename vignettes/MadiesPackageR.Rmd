@@ -1,8 +1,8 @@
 ---
-title: "Fish Averages"
+title: "Madies Package"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Fish Averages}
+  %\VignetteIndexEntry{Madies Package}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---

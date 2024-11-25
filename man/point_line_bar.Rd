@@ -24,6 +24,25 @@ point_line_bar(
 \item{x}{the variable you want on the x-axis}
 
 \item{y}{the variable you want on the y-axis}
+
+\item{geom}{what kind of graph do you want (point, bar or line)}
+
+\item{title}{title of the graph}
+
+\item{x_lab}{x-axis label}
+
+\item{y_lab}{y-axis label}
+
+\item{color}{color you want on your graph}
+
+\item{alpha}{alpha size}
+
+\item{size}{size of graph}
+
+\item{theme}{what theme do you want}
+}
+\value{
+returns graph that user created
 }
 \description{
 Allows you to create a point, line or bar graph with your own parameters
