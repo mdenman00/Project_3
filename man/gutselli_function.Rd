@@ -4,7 +4,7 @@
 \alias{gutselli_function}
 \title{Finds average and returns text if size is too small}
 \usage{
-gutselli_function(filepath, column)
+gutselli_function(filepath, column, number)
 }
 \arguments{
 \item{filepath}{The path to the tab-delimited file you want to process}

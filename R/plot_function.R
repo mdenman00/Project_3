@@ -1,4 +1,4 @@
-#' A simple point plot of data
+#' Allows you to create a point, line or bar graph with your own parameters
 #'
 #' @param data the data you want to plot
 #' @param x the variable you want on the x-axis

@@ -2,9 +2,9 @@
 % Please edit documentation in R/clean_function.R
 \name{clean_data}
 \alias{clean_data}
-\title{Replaces blank spaces and omits NAs in data}
+\title{Replaces NA values of users choice and omits NAs in data}
 \usage{
-clean_data(filepath)
+clean_data(filepath, na_values = c())
 }
 \arguments{
 \item{filepath}{}
@@ -13,5 +13,5 @@ clean_data(filepath)
 clean dataframe
 }
 \description{
-Replaces blank spaces and omits NAs in data
+Replaces NA values of users choice and omits NAs in data
 }
