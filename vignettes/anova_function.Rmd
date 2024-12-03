@@ -1,0 +1,32 @@
+---
+title: "ANOVA"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Madies Package}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+# Anova Function Instructions
+
+# This function will create an ANOVA and graphs to go along with the analyses. 
+ 
+## installation instructions
+```{r setup}
+devtools::install_github("mdenman00/Project_3")
+library(MadiesPackageR)
+```
+
+### ANOVA Example
++ You will need to put in a dataframe, response, and predictor. The function will return four graphs and ANOVA values
+
+```
+MadiesPackageR:: anova_function(gutselli, "TV", "SL")
+```

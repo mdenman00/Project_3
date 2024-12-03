@@ -1,0 +1,33 @@
+---
+title: "Cleaning Data"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Madies Package}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+# Clean function instructions
+
+### This function will omit some preset NA values but has the option to omit custom NAs
+
+## installation instructions
+```{r setup}
+devtools::install_github("mdenman00/Project_3")
+library(MadiesPackageR)
+```
+
+### ANOVA Example
++ You will need to put in a filepath and at least one NA. The function will return a clean dataset 
+
+```
+MadiesPackageR::clean_data("data/clean_gutselli.csv", na_values = ("na"))
+```
+
