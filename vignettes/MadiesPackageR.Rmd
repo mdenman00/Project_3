@@ -32,6 +32,7 @@ library(MadiesPackageR)
 
 ## using function one
 ```
+# this will average give an average from a column and print a message if the average is smaller than you need 
 
 MadiesPackageR::gutselli_function()
 ```
