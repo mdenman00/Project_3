@@ -1,0 +1,32 @@
+---
+title: "Log Function"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Madies Package}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+# Log function instructions
+
+### This function will perform a log10 and create a new column of logged data. 
+
+## installation instructions
+```{r setup}
+devtools::install_github("mdenman00/Project_3")
+library(MadiesPackageR)
+```
+
+### Example
++ You will need to put in a filepath and column.  
+
+```
+MadiesPackageR::log_transform("data/clean_gutselli.csv", "SL")
+```

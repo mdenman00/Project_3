@@ -1,0 +1,34 @@
+---
+title: "Gutselli"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Madies Package}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+# Gutselli function instructions
+
+### This function will average a column of data and the user will put in a number. If the average is less than that, "too small" will print back. 
+
+## installation instructions
+```{r setup}
+devtools::install_github("mdenman00/Project_3")
+library(MadiesPackageR)
+```
+
+### Example
++ You will need to put in a filepath, column, and number that you'd like to compare. The function will return a message if the average is too small or return the average. 
+
+```
+MadiesPackageR::gutselli_function("data/clean_gutselli.csv", "SL", 65)
+```
+
+

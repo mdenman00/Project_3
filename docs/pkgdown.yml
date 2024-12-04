@@ -2,6 +2,8 @@ pandoc: 3.1.11
 pkgdown: 2.1.1
 pkgdown_sha: ~
 articles:
+  anova_function: anova_function.html
+  clean_function: clean_function.html
   MadiesPackageR: MadiesPackageR.html
   Project3_amd: Project3_amd.html
-last_built: 2024-12-03T19:40Z
+last_built: 2024-12-03T20:27Z

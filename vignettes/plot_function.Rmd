@@ -1,0 +1,35 @@
+---
+title: "Plot Function"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Madies Package}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+# Plotting function instructions
+
+### This function will print either a bar, point, or line plot. 
+
+## installation instructions
+```{r setup}
+devtools::install_github("mdenman00/Project_3")
+library(MadiesPackageR)
+```
+
+### Example
++ You will need to put in a filepath, x, y, plot choice, labels, and a color.  
+
+```
+MadiesPackageR::point_line_bar(gutselli, "SL", "TV", geom = "point", title = "Point Plot", x_lab = "Standard Length", y_lab = "Transverse",
+                     color = "hotpink", alpha = 0.5, size = 2, theme = theme_minimal())
+```
+
+

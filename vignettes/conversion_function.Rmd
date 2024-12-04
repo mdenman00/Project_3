@@ -1,0 +1,34 @@
+---
+title: "Converting Data"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Madies Package}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+# Conversion function instructions
+
+### This function will convert a column of data from centimeters to inches
+
+## installation instructions
+```{r setup}
+devtools::install_github("mdenman00/Project_3")
+library(MadiesPackageR)
+```
+
+### Conversion Example
++ You will need to put in a filepath and a column. The function will return a converted column. 
+
+```
+MadiesPackageR::inches("data/clean_gutselli.csv", "SL")
+```
+
+
