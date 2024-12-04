@@ -5,13 +5,13 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ProjectThree • MadiesPackageR</title>
+<title>Gutselli • MadiesPackageR</title>
 <!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><!-- Bootstrap --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script><!-- bootstrap-toc --><link rel="stylesheet" href="../bootstrap-toc.css">
 <script src="../bootstrap-toc.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
 <!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="../pkgdown.css" rel="stylesheet">
-<script src="../pkgdown.js"></script><meta property="og:title" content="ProjectThree">
+<script src="../pkgdown.js"></script><meta property="og:title" content="Gutselli">
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -88,111 +88,45 @@
       </header><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
-      <h1 data-toc-skip>ProjectThree</h1>
+      <h1 data-toc-skip>Gutselli</h1>
             
       
 
-      <div class="hidden name"><code>Project3_amd.Rmd</code></div>
+      <div class="hidden name"><code>gutselli_function.Rmd</code></div>
 
     </div>
 
     
     
 <div class="section level2">
-<h2 id="due-nov--26-at-5-pm-">DUE Nov. 26 at 5 PM.<a class="anchor" aria-label="anchor" href="#due-nov--26-at-5-pm-"></a>
+<h2 id="gutselli-function-instructions">Gutselli function instructions<a class="anchor" aria-label="anchor" href="#gutselli-function-instructions"></a>
 </h2>
-<p>The goal of project three is to get you to make significant progress
-on the coding aspects of the Final Project. I don’t want people waiting
-until the last second to try coding it all the night before. That would
-be bad for everyone involved.</p>
-</div>
-<div class="section level2">
-<h2 id="undergrads">Undergrads<a class="anchor" aria-label="anchor" href="#undergrads"></a>
-</h2>
-<div class="section level3">
-<h3 id="part-one">Part One<a class="anchor" aria-label="anchor" href="#part-one"></a>
-</h3>
-<p>Part One of project three will be to write the remaining custom
-functions for your R package. As a reminder, your package must
-contain:</p>
-<ul>
-<li>A function to clean some data of your choice</li>
-<li>A function to somehow manipulate, subset, or transform data</li>
-<li>A statistical function (ANOVA, LM, other of your choosing)</li>
-<li>A function that plots data</li>
-<li>One for fun</li>
-</ul>
-<p>Each function must:</p>
-<ul>
-<li>Have appropriate input and output types</li>
-<li>Do the task it’s supposed to do</li>
-<li>It has to <em>work</em>
-</li>
-<li>Have some way of evaluating either the output for correctness (i.e.,
-knowing you actually dropped the NA values), or validating input (for
-your graphing function, it might be easier to evaluate that the inputs
-are right than the graph is)</li>
-</ul>
+<div class="section level4">
+<h4 id="this-function-will-average-a-column-of-data-and-the-user-will-put-in-a-number--if-the-average-is-less-than-that-too-small-will-print-back-">This function will average a column of data and the user will put in
+a number. If the average is less than that, “too small” will print
+back.<a class="anchor" aria-label="anchor" href="#this-function-will-average-a-column-of-data-and-the-user-will-put-in-a-number--if-the-average-is-less-than-that-too-small-will-print-back-"></a>
+</h4>
 </div>
 <div class="section level3">
-<h3 id="part-two">Part Two<a class="anchor" aria-label="anchor" href="#part-two"></a>
+<h3 id="installation-instructions">installation instructions<a class="anchor" aria-label="anchor" href="#installation-instructions"></a>
 </h3>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"mdenman00/Project_3"</span><span class="op">)</span></span>
+<span><span class="co">#&gt; Using github PAT from envvar GITHUB_PAT. Use `gitcreds::gitcreds_set()` and unset GITHUB_PAT in .Renviron (or elsewhere) if you want to use the more secure git credential store instead.</span></span>
+<span><span class="co">#&gt; Skipping install of 'MadiesPackageR' from a github remote, the SHA1 (de0e9949) has not changed since last install.</span></span>
+<span><span class="co">#&gt;   Use `force = TRUE` to force installation</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">MadiesPackageR</span><span class="op">)</span></span></code></pre></div>
+<div class="section level4">
+<h4 id="example">Example<a class="anchor" aria-label="anchor" href="#example"></a>
+</h4>
 <ul>
-<li>Each function must have an appropriate header that adequately
-explains how the function works</li>
-<li>The package must have a README file that explains what the package
-does and what functions are in it.</li>
+<li>You will need to put in a filepath, column, and number that you’d
+like to compare. The function will return a message if the average is
+too small or return the average.</li>
 </ul>
+<pre><code><span><span class="fu">MadiesPackageR</span><span class="fu">::</span><span class="fu"><a href="../reference/gutselli_function.html">gutselli_function</a></span><span class="op">(</span><span class="st">"data/clean_gutselli.csv"</span>, <span class="st">"SL"</span>, <span class="fl">65</span><span class="op">)</span></span></code></pre>
 </div>
 </div>
-<div class="section level2">
-<h2 id="ms-studentsh-option">MS Students/H-Option<a class="anchor" aria-label="anchor" href="#ms-studentsh-option"></a>
-</h2>
-<div class="section level3">
-<h3 id="part-one-1">Part One<a class="anchor" aria-label="anchor" href="#part-one-1"></a>
-</h3>
-<p>Part One of project three will be to write the remaining custom
-functions for your R package. As a reminder, your package must
-contain:</p>
-<ul>
-<li>A function to clean some data of your choice</li>
-<li>A function to somehow manipulate, subset, or transform data</li>
-<li>A statistical function (ANOVA, LM, other of your choosing)</li>
-<li>A function that plots data</li>
-<li>Two that do something else pertaining to your dissertation
-work.</li>
-</ul>
-<p>Each function must:</p>
-<ul>
-<li>Have appropriate input and output types</li>
-<li>Do the task it’s supposed to do</li>
-<li>It has to <em>work</em>
-</li>
-<li>Have some way of evaluating either the output for correctness (i.e.,
-knowing you actually dropped the NA values), or validating input (for
-your graphing function, it might be easier to evaluate that the inputs
-are right than the graph is)</li>
-</ul>
-<p>AMW: A couple things: I fixed an improperly placed <code>dplyr</code>
-import in the Gutselli function. You’ll want to make sure you re-build
-your package and push to GitHub. You also might consider making some NA
-values default in the clean_function.</p>
-<p>Good work.</p>
-</div>
-<div class="section level3">
-<h3 id="part-two-1">Part Two<a class="anchor" aria-label="anchor" href="#part-two-1"></a>
-</h3>
-<ul>
-<li>Each function must have an appropriate header that adequately
-explains how the function works</li>
-<li>The package must have a README file that explains what the package
-does and what functions are in it.</li>
-</ul>
-</div>
-</div>
-<div class="section level2">
-<h2 id="amw-this-was-good-">AMW: This was good.<a class="anchor" aria-label="anchor" href="#amw-this-was-good-"></a>
-</h2>
 </div>
   </div>
 
