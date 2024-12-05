@@ -18,11 +18,19 @@ knitr::opts_chunk$set(
 ## introducing Madies package
 
 # This package will be able to do some basic cleaning, graphing, a conversion and a little bit of math (ANOVA and log). The idea behind this project is cleaning data for processing and further analyses and providing basic functions that will setup data for further analyses. 
- 
+
 ## installation instructions
 ```{r setup}
 devtools::install_github("mdenman00/Project_3")
 library(MadiesPackageR)
+```
+
+## data download instructions
+``` {r}
+library(readr)
+library(googlesheets4)
+gs4_deauth()
+download.file("https://github.com/mdenman00/Project_3/blob/main/data/clean_gutselli.csv", "/cloud/project/data/clean_gutselli.csv")
 ```
 
 ## where to get the data 

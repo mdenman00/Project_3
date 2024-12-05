@@ -5,7 +5,7 @@
 #' @return clean dataframe
 #' @export
 clean_data = function(filepath, na_values = c()) {
-  df <- readr::read_csv(filepath, na = na_values) %>%
+  df <- readr::read_csv(filepath, na = c(na_values, "-", "NA")) %>%
   na.omit()
   return(df)
 }

@@ -7,8 +7,8 @@
 #' @export
 gutselli_function = function(filepath, column, number){
   df = readr::read_csv(filepath, na=c("", "-","NA"))
-  result = dplyr::df %>%
-    pull({{column}}) %>%
+  result = df %>%
+    dplyr::pull({{column}}) %>%
     na.omit %>%
     mean
   if (result < number){ print("Too Small")}
