@@ -8,6 +8,7 @@ Imports:
     dplyr,
     ggplot2,
     magrittr,
+    devtools,
     readr
 License: MIT
 Encoding: UTF-8
